@@ -1,7 +1,7 @@
 // case of uses
 // add cart
 async function addItem(userCart, item) {
-  userCart.push(item)
+  userCart.push(item);
 }
 
 // delete item
@@ -14,12 +14,23 @@ async function deleteItem(userCart, name) {
 }
 
 // remove item
-async function removeItem(userCart, index) {
-  userCart.forEach(async (item, i) => {
-    if (index === i) {
-      item.quantity -= 1
-    }
-  })
+async function removeItem(userCart, item) {
+  const indexFound = userCart.findIndex((p) => p.name === item.name)
+
+  if (indexFound == -1) {
+    return;
+  }
+
+  if (userCart[indexFound].quantity > 1) {
+    userCart[indexFound].quantity -= 1;
+    return;
+  }
+
+  if (userCart[indexFound].quantity === 1) {
+    userCart.splice(indexFound, 1)
+    return;
+  }
+
 }
 
 // calc total
