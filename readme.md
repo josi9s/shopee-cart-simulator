@@ -4,7 +4,7 @@ Simulação de um carrinho de compras utilizando JavaScript puro (Node.js), com 
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Adicionar item ao carrinho
 - Remover unidade de um item
@@ -14,7 +14,7 @@ Simulação de um carrinho de compras utilizando JavaScript puro (Node.js), com 
 
 ---
 
-## 🧠 Conceitos utilizados
+## Conceitos utilizados
 
 - Manipulação de arrays (`push`, `splice`, `findIndex`, `reduce`)
 - Funções assíncronas (`async/await`)
